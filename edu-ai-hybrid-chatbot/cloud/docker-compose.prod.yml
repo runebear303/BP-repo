@@ -1,0 +1,13 @@
+﻿version: "3.9"
+services:
+  backend:
+    image: yourdockerhub/edu-ai-backend
+    env_file: .env.prod
+    ports:
+      - "80:8000"
+
+  qdrant:
+    image: qdrant/qdrant
+
+  mcp:
+    image: yourdockerhub/edu-ai-mcp
